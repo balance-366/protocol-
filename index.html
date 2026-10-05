@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Symbiocene Protocol | 36.6 Global Balance</title>
   
-  <!-- Мета-теги для красивого превью в соцсетях и мессенджерах (Open Graph) -->
   <meta name="description" content="10 Pillars of a Resource-Based Economy. Transitioning from monetary friction to cybernetic homeostasis. Calibration 36.6.">
   <meta property="og:title" content="The Symbiocene Protocol | 36.6 Global Balance">
   <meta property="og:description" content="A cybernetic framework replacing scarcity with thermodynamic abundance and open-source intelligence.">
@@ -44,14 +43,13 @@
     </div>
     
     <div class="flex items-center space-x-3">
-      <!-- Телеметрия -->
       <div class="hidden sm:inline-block mono text-xs text-cyan-300/80 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-500/30">
         CALIBRATION: 36.6 °C
       </div>
 
-      <!-- Кнопка переключения языков -->
+      <!-- Кнопка 3 языков: RU / EN / PT -->
       <button id="langToggle" class="mono text-xs font-semibold px-3 py-1.5 rounded-lg border border-cyan-400/40 bg-cyan-950/80 text-cyan-300 hover:border-cyan-300 hover:text-white transition flex items-center space-x-1.5">
-        <span id="langDisplay">EN</span>
+        <span id="langDisplay">RU</span>
         <span class="text-slate-500 text-[10px]">🌐</span>
       </button>
     </div>
@@ -80,7 +78,7 @@
           <source src="hero.mp4" type="video/mp4">
         </video>
         <div class="absolute bottom-4 left-6 mono text-[11px] text-cyan-300 drop-shadow">
-          NODE: GLOBAL ATLANTIC INTERFACE // CALIBRATION: 36.6
+          NODE: LISBON ATLANTIC INTERFACE // CALIBRATION: 36.6
         </div>
       </div>
     </div>
@@ -238,24 +236,25 @@
     </div>
   </main>
 
-  <!-- Футер с кнопкой "Поделиться" -->
+  <!-- Футер -->
   <footer class="mt-20 border-t border-cyan-900/40 glass py-12 text-center text-slate-500 text-xs md:text-sm mono px-4">
     <p data-i18n="footer_title">THE SYMBIOCENE PROTOCOL // OPEN SOURCE CIVILIZATION FRAMEWORK</p>
     <p class="mt-2 text-cyan-400" data-i18n="footer_sub">Friction eliminated. Calibration frequency: 36.6 🌐</p>
     
     <div class="mt-6">
-      <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard / Ссылка скопирована!');" class="inline-flex items-center space-x-2 text-xs text-cyan-300 bg-cyan-950/70 border border-cyan-500/30 px-4 py-2 rounded-full hover:bg-cyan-900/50 transition">
+      <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied / Ссылка скопирована / Link copiado!');" class="inline-flex items-center space-x-2 text-xs text-cyan-300 bg-cyan-950/70 border border-cyan-500/30 px-4 py-2 rounded-full hover:bg-cyan-900/50 transition">
         <span>🔗</span>
         <span data-i18n="copy_link">Скопировать манифест</span>
       </button>
     </div>
   </footer>
 
-  <!-- Скрипт мультиязычности (RU / EN) -->
+  <!-- Скрипт 3 языков (RU / EN / PT) -->
   <script>
+    const order = ['ru', 'en', 'pt'];
     const translations = {
       ru: {
-        langBtn: "EN",
+        badge: "RU",
         hero_badge: "Точка сборки планетарного гомеостаза",
         hero_title_1: "10 СТОЛПОВ",
         hero_title_2: "РЕСУРСНО-ОРИЕНТИРОВАННОЙ ЭКОНОМИКИ",
@@ -286,7 +285,7 @@
         copy_link: "Скопировать манифест"
       },
       en: {
-        langBtn: "RU",
+        badge: "EN",
         hero_badge: "Planetary Homeostasis Nexus",
         hero_title_1: "10 PILLARS OF A",
         hero_title_2: "RESOURCE-BASED ECONOMY",
@@ -315,73 +314,9 @@
         footer_title: "THE SYMBIOCENE PROTOCOL // OPEN SOURCE CIVILIZATION FRAMEWORK",
         footer_sub: "Friction eliminated. Calibration frequency: 36.6 🌐",
         copy_link: "Copy Protocol Link"
-      }
-    };
-
-    let currentLang = localStorage.getItem('symbiocene_lang') || 'ru';
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      localStorage.setItem('symbiocene_lang', lang);
-      document.getElementById('langDisplay').textContent = translations[lang].langBtn;
-      
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
-
-    document.getElementById('langToggle').addEventListener('click', () => {
-      setLanguage(currentLang === 'ru' ? 'en' : 'ru');
-    });
-
-    // Инициализация при загрузке страницы
-    setLanguage(currentLang);
-  </script>
-</body>
-</html>
-
-        </div>
-      </article>
-
-      <!-- 09 SOCIETY -->
-      <article class="glass glass-active rounded-xl p-6 transition duration-300 flex flex-col justify-between">
-        <div>
-          <div class="flex justify-between items-start mb-4">
-            <span class="mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-500/20">09 // SOCIETY</span>
-            <span class="mono text-xs text-emerald-400">DEPOLARIZED / FREE</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Деполяризация и резонанс</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Когда выживание гарантировано инфраструктурой, исчезает фундамент для преступности, классовой зависти и социальной токсичности. Переход энергии в науку и творчество.
-          </p>
-        </div>
-      </article>
-
-      <!-- 10 GOVERNANCE -->
-      <article class="glass glass-active rounded-xl p-6 transition duration-300 flex flex-col justify-between border-cyan-400/40">
-        <div>
-          <div class="flex justify-between items-start mb-4">
-            <span class="mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-500/20">10 // GOVERNANCE</span>
-            <span class="mono text-xs text-emerald-400">ZERO POLITICIANS</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Кибернетическое управление</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Замена парламентов алгоритмическим сопоставлением потребностей с несущей способностью Земли. Устранение границ, армий и монетарного управления планетой.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </main>
-
-  <!-- Футер -->
-  <footer class="mt-20 border-t border-cyan-900/40 glass py-12 text-center text-slate-500 text-sm mono">
-    <p>THE SYMBIOCENE PROTOCOL // OPEN SOURCE CIVILIZATION FRAMEWORK</p>
-    <p class="mt-2 text-cyan-400">Friction eliminated. Calibration frequency: 36.6 🌐</p>
-  </footer>
-
-</body>
-</html>
+      },
+      pt: {
+        badge: "PT",
+        hero_badge: "Nexo de Homeostase Planetária",
+        hero_title_1: "10 PILARES DE UMA",
+        hero_title_2: "ECONOMIA BASEADA EM RECURS
